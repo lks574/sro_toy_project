@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
+class InstaSearchScreen extends StatelessWidget {
+  const InstaSearchScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +9,8 @@ class SearchScreen extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SearchTextBar(),
-            SearchGrid(),
+            InstaSearchTextBar(),
+            InstaSearchGrid(),
           ],
         ),
       ),
@@ -18,8 +18,8 @@ class SearchScreen extends StatelessWidget {
   }
 }
 
-class SearchTextBar extends StatelessWidget {
-  const SearchTextBar({super.key});
+class InstaSearchTextBar extends StatelessWidget {
+  const InstaSearchTextBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,10 +50,10 @@ class SearchTextBar extends StatelessWidget {
   }
 }
 
-final gridItems = List.generate(30, (index) => Colors.green.shade300);
+final instaGridItems = List.generate(30, (index) => Colors.green.shade300);
 
-class SearchGrid extends StatelessWidget {
-  const SearchGrid({super.key});
+class InstaSearchGrid extends StatelessWidget {
+  const InstaSearchGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class SearchGrid extends StatelessWidget {
       crossAxisCount: 3,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      children: gridItems
+      children: instaGridItems
           .map(
             (color) => Container(
               color: color,

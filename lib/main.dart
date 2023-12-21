@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sro_toy_project/body.dart';
+import 'package:sro_toy_project/ex/InstaClone/instar_home.dart';
 
 void main() {
   runApp(const InstaCloneApp());
@@ -22,76 +20,7 @@ class InstaCloneApp extends StatelessWidget {
             selectedItemColor: Colors.black,
           ),
           useMaterial3: true),
-      home: const InstaCloneHome(),
-    );
-  }
-}
-
-class InstaCloneHome extends StatefulWidget {
-  const InstaCloneHome({super.key});
-
-  @override
-  State<InstaCloneHome> createState() => _InstaCloneHomeState();
-}
-
-class _InstaCloneHomeState extends State<InstaCloneHome> {
-  late int index;
-
-  @override
-  void initState() {
-    super.initState();
-    index = 0;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: index == 0
-          ? AppBar(
-              title: Text(
-                "Instagram",
-                style:
-                    GoogleFonts.lobsterTwo(color: Colors.black, fontSize: 32),
-              ),
-              centerTitle: false,
-              actions: [
-                IconButton(
-                    onPressed: () {
-                      print("Tab favorite");
-                    },
-                    icon: const Icon(
-                      Icons.favorite_outline,
-                      size: 32,
-                    )),
-                IconButton(
-                    onPressed: () {
-                      print("Tab favorite");
-                    },
-                    icon: const Icon(
-                      CupertinoIcons.paperplane,
-                      size: 32,
-                    ))
-              ],
-            )
-          : null,
-      body: InstaBody(index: index),
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: index,
-          onTap: (newIndex) => setState(() => index = newIndex),
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                  size: 28,
-                ),
-                label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.search,
-                  size: 28,
-                ),
-                label: 'Search'),
-          ]),
+      home: const InstaHome(),
     );
   }
 }
