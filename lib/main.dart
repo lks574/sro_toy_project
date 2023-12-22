@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sro_toy_project/ex/InstaClone/instar_home.dart';
+import 'package:sro_toy_project/ex/RSP/rsp_main.dart';
 
 void main() {
   runApp(const InstaCloneApp());
@@ -25,6 +26,7 @@ class InstaCloneApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeListScreen(),
         '/insta': (context) => const InstaHome(),
+        '/rsp': (context) => const RSPMain(),
       },
     );
   }
@@ -35,7 +37,10 @@ class HomeListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const pageList = ['/insta'];
+    const pageList = [
+      '/insta',
+      '/rsp',
+    ];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sro Flutter'),
