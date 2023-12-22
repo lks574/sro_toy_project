@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sro_toy_project/ex/InstaClone/insta_body.dart';
 
 class InstaHome extends StatefulWidget {
   const InstaHome({super.key});
